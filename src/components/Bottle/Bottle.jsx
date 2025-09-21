@@ -1,8 +1,8 @@
 import React from "react";
 import './Bottle.css';
 
-const Bottle = ({ bottle }) => {
-  console.log(bottle);
+const Bottle = ({ bottle, handelAddToCart }) => {
+//   console.log(bottle);
   const { img, name, price, stock } = bottle;
 
   return (
@@ -11,7 +11,7 @@ const Bottle = ({ bottle }) => {
       <h3>{name}</h3>
       <p>${price}</p>
       <p>Available : {stock}</p>
-      <button>Buy Now</button>
+      <button onClick={() => handelAddToCart(bottle)}>Buy Now</button>
     </div>
   );
 };
